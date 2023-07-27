@@ -4,6 +4,7 @@
   height: 100%;
   position:fixed ;
   margin-bottom: 0%;
+  width: 15%;
   box-shadow: 1px 7px 9px rgb(3, 28, 32);
   
   
@@ -13,4 +14,38 @@
 }
 .text-color{
   color: #ab2800;
+}
+.btn-clear-cart{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(190, 2, 2);
+  height: 7%;
+  width: 100%;
+  color: #fffefe;
+  border-radius: 8px;
+  
+}
+.clear-cart{
+  margin-top: 8%;
+}
+.icon-clear{
+  margin-top: 10%;
+  margin-right: 5%;
+}
+.btn-review-cart{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(230, 92, 7);
+  height: 7%;
+  width: 100%;
+  color: #fffefe;
+  border-radius: 8px;
+}
+.review-cart{
+  margin-top: 8%;
+}
+.icon-review{
+  margin-top: 10%;
+  margin-right: 5%;
 }
