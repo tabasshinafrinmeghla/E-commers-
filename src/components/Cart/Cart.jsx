@@ -45,11 +45,11 @@ const Cart = ({ cart }) => {
   return (
     <div className='cart'>
       <h3>Order Summary</h3>
-      <p>Select Items:{quantity} </p>
-      <p>Total Price: {total}</p>
-      <p>Total Shipping:{totalShopping}</p>
-      <p>tax: {tax.toFixed(2)} </p>
-      <h4>Grand Total:{grand.toFixed(2)}</h4>
+      <p>Select Items: <span className='text-color'> {quantity} </span></p>
+      <p>Total Price: <span className='text-color'> {total} </span></p>
+      <p>Total Shipping: <span className='text-color'> {totalShopping} </span></p>
+      <p>tax:<span className='text-color'>  {tax.toFixed(2)} </span></p>
+      <h4>Grand Total: <span className='text-color'> {grand.toFixed(2)} </span></h4>
     </div>
   );
 };
