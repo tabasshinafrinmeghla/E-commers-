@@ -1,0 +1,14 @@
+.cart{
+  background-color: rgb(135, 144, 142);
+  padding: 15px;
+  width: 20%;
+  height: 100%;
+  position:fixed ;
+  margin-bottom: 0%;
+  box-shadow: 1px 7px 9px rgb(3, 28, 32);
+  
+  
+}
+.cart p{
+  font-size: 17px;
+}
