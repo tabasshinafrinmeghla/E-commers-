@@ -6,6 +6,8 @@ import Product from '../../product/Product/Product';
 import Cart from '../../Cart/Cart';
 import { addToDb, deleteShoppingCart, getShoppingCart, } from '../../../../ema-john-resources-main/utilities/fakedb';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -100,7 +102,9 @@ const Shop = () => {
         handleClearCart ={handleClearCart}
         >
           <Link to= "/orderReview">
-            <button>Review Orders</button>
+            <button className='button-proceed'>Review Orders 
+            <FontAwesomeIcon className='right-icon' icon={faArrowCircleRight} />
+            </button>
           </Link>
         </Cart>
 
@@ -110,3 +114,5 @@ const Shop = () => {
 };
 
 export default Shop;
+
+//  icon={faArrowCircleRight}

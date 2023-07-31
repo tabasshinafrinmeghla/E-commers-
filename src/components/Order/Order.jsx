@@ -6,6 +6,8 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Product from '../product/Product/Product';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { deleteShoppingCart, removeFromDb } from '../../../ema-john-resources-main/utilities/fakedb';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGift } from '@fortawesome/free-solid-svg-icons';
 
 const Order = () => {
 
@@ -46,7 +48,9 @@ const handleClearCart = () =>{
         
         >
          <Link to ="/checkout">
-          <button>Proceed Checkout </button>
+          <button className='button-proceed'>Proceed Checkout 
+          <FontAwesomeIcon className='right-icon' icon={faGift}/>
+          </button>
          </Link>
         </Cart>
       </div>
@@ -55,3 +59,5 @@ const handleClearCart = () =>{
 };
 
 export default Order;
+
+// <FontAwesomeIcon className='right-icon' icon={faArrowCircleRight} />
