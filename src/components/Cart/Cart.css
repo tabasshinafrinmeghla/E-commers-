@@ -4,7 +4,7 @@
   height: 100%;
   position:fixed ;
   margin-bottom: 0%;
-  width: 15%;
+  /* width: 15%; */
   box-shadow: 1px 7px 9px rgb(3, 28, 32);
   
   
@@ -23,6 +23,7 @@
   width: 100%;
   color: #fffefe;
   border-radius: 8px;
+  padding: 2%;
   
 }
 .clear-cart{

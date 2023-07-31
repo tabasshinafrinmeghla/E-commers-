@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import './Order.css'
 import Cart from '../Cart/Cart';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Product from '../product/Product/Product';
 import ReviewItem from '../ReviewItem/ReviewItem';
-import { removeFromDb } from '../../../ema-john-resources-main/utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../../ema-john-resources-main/utilities/fakedb';
 
 const Order = () => {
 
@@ -20,6 +20,10 @@ const handleRemoveFromCart = (id) =>{
 }
 
 
+const handleClearCart = () =>{
+  setCart([]);
+  deleteShoppingCart()
+}
 
 
 
@@ -36,7 +40,15 @@ const handleRemoveFromCart = (id) =>{
         }
       </div>
       <div className='card_container'>
-        <Cart cart={cart}></Cart>
+        <Cart 
+        cart={cart}
+        handleClearCart={handleClearCart}
+        
+        >
+         <Link to ="/checkout">
+          <button>Proceed Checkout </button>
+         </Link>
+        </Cart>
       </div>
     </div>
   );

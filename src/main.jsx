@@ -12,6 +12,7 @@ import Order from './components/Order/Order';
 import Manage from './components/Manage/Manage';
 import Login from './components/Login/Login';
 import cartProductsLoader from './components/Loaders/cartProductsLoader';
+import Checkout from './components/Checkout/Checkout';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path:'Inventory',
         element:<Manage></Manage>,
         loader: () => fetch('products.json')
+
+      },
+      {
+        path:'checkout',
+        element :<Checkout></Checkout>
 
       },
       {

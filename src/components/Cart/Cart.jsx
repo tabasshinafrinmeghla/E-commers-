@@ -3,10 +3,10 @@
 // import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.css';
-import { faArrowCircleRight, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import {  faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 // eslint-disable-next-line react/prop-types
-const Cart = ({ cart }) => {
+const Cart = ({ cart,handleClearCart, children  }) => {
   // const {cart} = props;
   console.log = (cart);
 
@@ -53,12 +53,19 @@ const Cart = ({ cart }) => {
       <p>tax:<span className='text-color'>  {tax.toFixed(2)} </span></p>
       <h4>Grand Total: <span className='text-color'> {grand.toFixed(2)} </span></h4>
 
-      <button className='btn-clear-cart'><span className='clear-cart'>Clear Cart</span>
+      <button onClick={handleClearCart}  className='btn-clear-cart'><span className='clear-cart'>Clear Cart</span>
         <FontAwesomeIcon className='icon-clear' icon={faTrashAlt}/>
       </button>
-      <button className='btn-review-cart'><span className='review-cart'>Review Order </span>
+      {children}
+
+
+
+
+
+
+      {/* <button className='btn-review-cart'><span className='review-cart'>Review Order </span>
         <FontAwesomeIcon className='icon-review' icon={faArrowCircleRight}/>
-      </button>
+      </button> */}
     </div>
   );
 };
