@@ -13,6 +13,7 @@ import Manage from './components/Manage/Manage';
 import Login from './components/Login/Login';
 import cartProductsLoader from './components/Loaders/cartProductsLoader';
 import Checkout from './components/Checkout/Checkout';
+import Contact from './components/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
         element :<Checkout></Checkout>
 
       },
+      {
+        path:'Contact',
+        element:<Contact></Contact>
+      }
+      ,
       {
         path:'Login',
         element:<Login></Login>
