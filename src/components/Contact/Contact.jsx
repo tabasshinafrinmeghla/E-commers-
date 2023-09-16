@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.css'
 import LiveTime from '../Live_time/LIveTime';
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
   return (
@@ -26,7 +27,7 @@ const Contact = () => {
         <h4 className='time'>Saturday: <span >10:00AM to 04;00 PM</span></h4>
         <h4 className='time'>Sunday: <span >10:00AM to 04;00 PM</span></h4>
       </div>
-      
+      <Footer></Footer>
 
     </>
   );
