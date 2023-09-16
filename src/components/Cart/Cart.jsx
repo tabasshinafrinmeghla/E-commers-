@@ -8,7 +8,7 @@ import {  faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 // eslint-disable-next-line react/prop-types
 const Cart = ({ cart,handleClearCart, children  }) => {
   // const {cart} = props;
-  console.log = (cart);
+  // console.log = (cart);
 
   let total = 0;
   let totalShopping = 0;
