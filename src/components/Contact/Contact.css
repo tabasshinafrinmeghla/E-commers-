@@ -69,3 +69,9 @@
 .time{
   text-align: center;
 }
+.live_time{
+  text-align: center;
+  background-color: rgb(233, 243, 241);
+  width: 30%;
+  margin-left: 40%;
+}

@@ -10,6 +10,9 @@ const Contact = () => {
 
         <p className='Contact_text'>Welcome to our E-commerce platform. We value your feedback, inquiries, and concerns. Our dedicated support team is here to assist you. Please feel free to reach out to us through the following channels </p>
       </div>
+      <div className='live_time'>
+        <LiveTime></LiveTime>
+      </div>
       <div className='input_text'>
         <input type="email" id="email" pattern=".+@globex\.com" size="50" required placeholder="Enter a gmail address" />
         <input type="text" id="text" pattern=".+@globex\.com" size="50" required placeholder="Enter your phone number" />
@@ -23,9 +26,7 @@ const Contact = () => {
         <h4 className='time'>Saturday: <span >10:00AM to 04;00 PM</span></h4>
         <h4 className='time'>Sunday: <span >10:00AM to 04;00 PM</span></h4>
       </div>
-      <div>
-        <LiveTime></LiveTime>
-      </div>
+      
 
     </>
   );
