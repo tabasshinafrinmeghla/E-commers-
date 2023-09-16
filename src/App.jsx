@@ -2,6 +2,7 @@
 
 import './App.css'
 import Header from './components/Component/Header'
+// import Footer from './components/Footer/Footer'
 import Shop from './components/Shops/Shop/Shop'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         
         <Header></Header>
         <Shop></Shop>
+        
       </div>
       
    

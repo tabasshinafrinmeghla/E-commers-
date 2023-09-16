@@ -18,12 +18,12 @@
 .btn-clear-cart{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(240, 64, 64);
-  height: 7%;
-  width: 100%;
-  color: #0a0000;
+  background-color: rgb(152, 3, 3);
+  height: 50px;
+  width: 150px;
+  color: #ffffff;
   border-radius: 8px;
-  padding: 2%;
+  padding: 1%;
   
 }
 .btn-clear-cart:hover{

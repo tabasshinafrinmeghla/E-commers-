@@ -1,12 +1,13 @@
 .footer{
   background-color: rgb(65, 93, 99);
+  color: #ffffff;
   /* padding: 2%; */
 }
 .firstFooter{
   background-color: rgb(68, 83, 78);
   text-align: center;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  /* padding-top: 1%;
+  padding-bottom: 1%; */
 }
 #FooterEmail{
   width: 30%;
@@ -32,4 +33,29 @@
 .footer_box{
   display: grid;
   margin-left: 40%;
+}
+.footerLogo{
+  padding: 10%;
+}
+.h{
+  width: 60%px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.angcerTag{
+  display: grid;
+  text-align: center;
+}
+.menu{
+  text-align: center;
+  color: aliceblue;
+}
+.endOfFooter{
+  display: flex;
+  justify-content: space-between;
+
+}
+.Contact_footer{
+  padding: 2%;
+  color: aliceblue;
 }
