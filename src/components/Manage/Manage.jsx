@@ -14,7 +14,7 @@ const Manage = () => {
       <div>
         <h1>hi</h1>
       </div>
-      <Footer></Footer>
+      
     </>
   );
 };

@@ -71,7 +71,7 @@
 }
 .live_time{
   text-align: center;
-  background-color: rgb(233, 243, 241);
+  /* background-color: rgb(233, 243, 241); */
   width: 30%;
-  margin-left: 40%;
+  margin-left: 35%;
 }

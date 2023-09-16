@@ -102,7 +102,7 @@ const Shop = () => {
         handleClearCart ={handleClearCart}
         >
           <Link to= "/orderReview">
-            <button className='button-proceed'>Review Orders 
+            <button className='button-proceed'>Review 
             <FontAwesomeIcon className='right-icon' icon={faArrowCircleRight} />
             </button>
           </Link>
