@@ -5,7 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-// import Shop from './components/Shops/Shop/Shop.jsx';
+
 import Home from './components/Layout/Home';
 import Shop from './components/Shops/Shop/Shop';
 import Order from './components/Order/Order';
@@ -14,8 +14,10 @@ import Login from './components/Login/Login';
 import cartProductsLoader from './components/Loaders/cartProductsLoader';
 import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
-
 import Registration from './components/Registration/Registration';
+import AuthProvider from './components/Providers/AuthProvider';
+
+
 
 
 const router = createBrowserRouter([
@@ -72,6 +74,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* এই খানে AuthProvide.jsx বসাবো  কারন এখান থেকে সব ডেটা  এক্সস করবে*/}
+
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )

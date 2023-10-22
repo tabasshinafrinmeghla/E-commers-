@@ -3,8 +3,8 @@
   width: 500px;
   height: 600px;
   margin: 20px auto;
-  background-color: rgb(75, 144, 127);
-  border: 1px solid rgb(201, 215, 211);
+  background-color: rgb(117, 122, 132);
+  border: 1px solid rgb(138, 138, 141);
   border-radius: 8px;
   padding-left: 60px;
 
@@ -17,6 +17,7 @@
   line-height: 42px;
   letter-spacing: 0.0025em;
   text-align: center;
+  margin-right:80px;
 
 
 }
@@ -35,7 +36,7 @@
   margin-right:100px;
   width: 400px;
   height: 55px;
-  border: 2px solid rgb(169, 252, 232);
+  border: 2px solid rgb(18, 60, 97);
   border-radius: 5px;
   font-size: 1.5em;
   padding-left: 20px;
@@ -44,23 +45,23 @@
 }
 .btn-submit{
   color: #fbfdfd;
-  background-color: rgb(8, 105, 90);
+  background-color: rgb(77, 87, 91);
   width: 420px;
   height: 60px;
   margin-top: 10px;
   margin-right: 70px;
-  border: 2px solid rgb(165, 218, 201);
+  border: 2px solid rgb(61, 75, 71);
   border-radius: 4px;
   font-size: 17px;
 }
 .btn-submit:hover{
   color: #fbfdfd;
-  background-color: rgb(5, 65, 42);
+  background-color: rgb(36, 39, 38);
   width: 420px;
   height: 60px;
   margin-top: 10px;
   margin-right: 70px;
-  border: 2px solid rgb(165, 218, 201);
+  border: 2px solid rgb(164, 165, 165);
   border-radius: 4px;
   font-size: 17px;
 }

@@ -2,13 +2,19 @@
 import './Header.css'
 import logo from '../ema-john-resources-main/images/Logo.svg';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Header = () => {
+
+  const { user } = useContext(AuthContext)
+  console.log(user)
+
   return (
     <div className='header'>
 
       <img src={logo} alt="" />
-      <div className='angkor_tag'>
+      <nav className='angkor_tag'>
         <Link to="/">Order</Link>
         <Link to="orderReview">Order Review</Link>
         <Link to="Inventory">Manage Inventory</Link>
@@ -16,8 +22,13 @@ const Header = () => {
         <Link to="Login">Log in</Link>
         <Link to="Registration">Sign up </Link>
 
+        {/* যদি ইউজার থাকে তাহলে আমরা ওয়েল কাম দেখাবো */}
+        {
+          user && <span> {user.email}</span>
+        }
 
-      </div>
+
+      </nav>
 
     </div>
   );
