@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css'
 import LiveTime from '../Live_time/LIveTime';
-import Footer from '../Footer/Footer';
+
 
 const Contact = () => {
   return (

@@ -14,7 +14,7 @@ import Login from './components/Login/Login';
 import cartProductsLoader from './components/Loaders/cartProductsLoader';
 import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
-import SignIn from './components/SignIn/SignIn';
+
 import Registration from './components/Registration/Registration';
 
 
