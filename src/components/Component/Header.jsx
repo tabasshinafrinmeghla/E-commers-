@@ -6,17 +6,19 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='header'>
-      
-     <img src={logo}alt=""/>
-     <div className='angkor_tag'>
-       <Link to="/">Order</Link>
-       <Link to="orderReview">Order Review</Link>
-       <Link to="Inventory">Manage Inventory</Link>
-       <Link to="Contact">Contact</Link>
-       <Link to="Login">Log in</Link>
-       
-     </div>
-      
+
+      <img src={logo} alt="" />
+      <div className='angkor_tag'>
+        <Link to="/">Order</Link>
+        <Link to="orderReview">Order Review</Link>
+        <Link to="Inventory">Manage Inventory</Link>
+        <Link to="Contact">Contact</Link>
+        <Link to="Login">Log in</Link>
+        <Link to="Registration">Sign up</Link>
+        
+
+      </div>
+
     </div>
   );
 };

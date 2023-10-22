@@ -14,48 +14,57 @@ import Login from './components/Login/Login';
 import cartProductsLoader from './components/Loaders/cartProductsLoader';
 import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
+import SignIn from './components/SignIn/SignIn';
+import Registration from './components/Registration/Registration';
+
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element:<Home></Home> ,
-    children:[
+    element: <Home></Home>,
+    children: [
       {
-        path:'/',
-        element:<Shop></Shop>
+        path: '/',
+        element: <Shop></Shop>
       },
       {
-        path:'orderReview',
-        element:<Order></Order>,
+        path: 'orderReview',
+        element: <Order></Order>,
         // loader: () => fetch('products.json')
-        loader:cartProductsLoader
+        loader: cartProductsLoader
 
       },
       {
-        path:'Inventory',
-        element:<Manage></Manage>,
+        path: 'Inventory',
+        element: <Manage></Manage>,
         loader: () => fetch('products.json')
 
       },
       {
-        path:'checkout',
-        element :<Checkout></Checkout>
+        path: 'checkout',
+        element: <Checkout></Checkout>
 
       },
       {
-        path:'Contact',
-        element:<Contact></Contact>
+        path: 'Contact',
+        element: <Contact></Contact>
       }
       ,
       {
-        path:'Login',
-        element:<Login></Login>
+        path: 'Login',
+        element: <Login></Login>
+
+      },
+      {
+        path: 'Registration',
+        element: <Registration></Registration>
 
       },
 
+
     ]
   }
-]) 
+])
 
 
 
