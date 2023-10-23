@@ -16,6 +16,7 @@ import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
 import Registration from './components/Registration/Registration';
 import AuthProvider from './components/Providers/AuthProvider';
+import PrivateRoutes from './components/routes/PrivateRoutes';
 
 
 
@@ -44,7 +45,9 @@ const router = createBrowserRouter([
       },
       {
         path: 'checkout',
-        element: <Checkout></Checkout>
+        /**
+         * checkout ekti private rout ei jonno age log in korte hobe */
+        element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>
 
       },
       {

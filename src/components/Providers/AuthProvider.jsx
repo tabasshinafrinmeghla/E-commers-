@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import app from '../../Firebase/fire.config';
+import { useLocation } from 'react-router-dom';
 
 export const AuthContext = createContext(null);
 /**
@@ -22,12 +23,14 @@ const AuthProvider = ({ children }) => {
   /**আমাদের যখন ইউজার থাকবে না তখন নাল দেখাবে ইউজার থাকলে দেখাবে এই জন্য আমরা useSate diye user  ব্যবহার করব */
 
   const [user, setUser] = useState(null);
+  /**
+   * loading er problem solve er jonno */
 
-
-
+  const [loading, setLoading] = useState(true)
   /**
    * 
 */
+
 
   const createUser = (email, password) => {
 
@@ -54,6 +57,7 @@ const AuthProvider = ({ children }) => {
     });
     return () => {
       return unsubscribe();
+      setLoading(false);
     }
   },
     [])
@@ -67,7 +71,7 @@ const AuthProvider = ({ children }) => {
 
 
   const authInfo = {
-    user, createUser, signIn, logOut
+    user, createUser, signIn, logOut, setLoading
 
   }
   return (

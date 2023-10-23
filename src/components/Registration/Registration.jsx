@@ -23,7 +23,7 @@ const Registration = () => {
     /*
     প্রত্যেক বার রিসেট করবে
     */
-    
+
     setError('');
 
 
@@ -45,7 +45,9 @@ const Registration = () => {
 
     alert('Successfully you Enrolled');
 
-
+    /**
+       * এই খানে ফাইয়ার বেস ফাংসান ব্যবহার করা হয়ছে
+       * */
 
     createUser(email, password)
       .then(result => {
@@ -59,9 +61,7 @@ const Registration = () => {
   }
 
 
-  /**
-   * এই খানে ফাইয়ার বেস ফাংসান ব্যবহার করা হয়ছে
-   * */
+
 
 
 
