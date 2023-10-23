@@ -7,8 +7,12 @@ import { AuthContext } from '../Providers/AuthProvider';
 
 const Header = () => {
 
-  const { user } = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext)
   console.log(user)
+
+  const handleLogOut = () =>{
+    
+  }
 
   return (
     <div className='header'>
@@ -24,7 +28,9 @@ const Header = () => {
 
         {/* যদি ইউজার থাকে তাহলে আমরা ওয়েল কাম দেখাবো */}
         {
-          user && <span> {user.email}</span>
+          user && <span> {user.email}
+            <button onClick={handleLogOut}>Sign Out</button>
+          </span>
         }
 
 

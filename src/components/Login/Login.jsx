@@ -10,7 +10,7 @@ const Login = () => {
    * sinIn আসবে useContext er AuthContext থেকে
   */
 
-  const { signIn } = useContext(AuthContext)
+  const { signIn } = useContext(AuthContext);
 
 
   const handleLogIn = event => {
@@ -28,13 +28,15 @@ const Login = () => {
 
     signIn(email, password)
       .then(result => {
-        const loginUser = result.user
-        console.log(loginUser)
+        const loggedUser = result.user
+        console.log(loggedUser)
         form.reset();
       })
       .catch(error => {
         console.log(error)
       })
+
+
   }
 
 
