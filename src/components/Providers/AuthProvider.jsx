@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import React, { createContext, useEffect, useState } from 'react';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import app from '../../Firebase/fire.config';
 
 export const AuthContext = createContext(null);
@@ -40,13 +40,34 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
 
   }
-  
-  const logOut = () =>{
+
+  const logOut = () => {
     return signOut(auth)
   }
 
+  /**
+   * observer user auth state {যখন ইউজার অথ চেঞ্জ হবে তখব কিছু একটা হবে }
+   * */
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, currentUser => {
+      setUser(currentUser);
+    });
+    return () => {
+      return unsubscribe();
+    }
+  },
+    [])
+
+
+  /**
+   * stop observing while unmounting 
+   */
+
+
+
+
   const authInfo = {
-    user, createUser, signIn,logOut
+    user, createUser, signIn, logOut
 
   }
   return (

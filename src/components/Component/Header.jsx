@@ -9,9 +9,11 @@ const Header = () => {
 
   const { user, logOut } = useContext(AuthContext)
   console.log(user)
-
+  
   const handleLogOut = () =>{
-    
+    logOut()
+    .then(result => {})
+  .catch(error => console.log(error) );
   }
 
   return (
@@ -29,7 +31,7 @@ const Header = () => {
         {/* যদি ইউজার থাকে তাহলে আমরা ওয়েল কাম দেখাবো */}
         {
           user && <span> {user.email}
-            <button onClick={handleLogOut}>Sign Out</button>
+            <button onClick={handleLogOut}>Log Out</button>
           </span>
         }
 
