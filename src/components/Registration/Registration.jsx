@@ -39,21 +39,29 @@ const Registration = () => {
       return
 
     }
-    alert('Successfully you Enrolled'); 
+
+
+
+    alert('Successfully you Enrolled');
+
+
+
+    createUser(email, password)
+      .then(result => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+      })
+      .catch(error => {
+        console.log(error)
+        setError(error.message)
+      })
   }
+
 
   /**
    * এই খানে ফাইয়ার বেস ফাংসান ব্যবহার করা হয়ছে
    * */
-  createUser(email, password)
-    .then(result => {
-      const loggedUser = result.user;
-      console.log(loggedUser);
-    })
-    .catch(error => {
-      console.log(error)
-      setError(error.message)
-    })
+
 
 
 

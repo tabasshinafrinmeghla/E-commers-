@@ -10,7 +10,11 @@ export const AuthContext = createContext(null);
 // const auth = getAuth(app);
 /* app টা পরে ইমপোরট করতে হবে না হ্লে ইরর দিবে */
 
+
 const auth = getAuth(app);
+
+
+
 
 const AuthProvider = ({ children }) => {
   // const user = { email: 'Megh' }
@@ -19,14 +23,15 @@ const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
 
-  
+
 
   /**
    * 
 */
 
-  const createUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+  const createUser = async (email, password) => {
+
+    return await createUserWithEmailAndPassword(auth, email, password);
 
   }
 
@@ -37,6 +42,8 @@ const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={authInfo}>
       {children}
+
+      {/* {console.log(auth)} */}
     </AuthContext.Provider>
   );
 };
@@ -48,4 +55,3 @@ export default AuthProvider;
 
 
 
-  
