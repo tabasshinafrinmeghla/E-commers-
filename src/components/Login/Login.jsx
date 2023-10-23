@@ -19,6 +19,8 @@ const Login = () => {
   const location = useLocation();
   console.log(location);
 
+  const from = location.state?.from?.pathname || '/';
+
 
   const handleLogIn = event => {
     event.preventDefault();
@@ -40,7 +42,7 @@ const Login = () => {
         const loggedUser = result.user
         console.log(loggedUser)
         form.reset();
-        navigate('/');
+        navigate(from, { replace: true });
       })
       .catch(error => {
         console.log(error)

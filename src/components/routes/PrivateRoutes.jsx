@@ -10,13 +10,12 @@ const PrivateRoutes = ({ children }) => {
   /**data gula authContext theke nibe */
   const { user, loading } = useContext(AuthContext);
 
-
   const location = useLocation();
   console.log(location);
 
-  
+
   if (loading) {
-    <div>Loading... . .   .</div>
+    return <div>Loading... . .   .</div>
 
   }
   /**
@@ -27,7 +26,7 @@ const PrivateRoutes = ({ children }) => {
   }
 
 
-  return <Navigate to='/Login'>
+  return <Navigate to='/Login' state={{from: location}} >
 
   </Navigate>;
 };

@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'Inventory',
-        element: <Manage></Manage>,
+        element: <PrivateRoutes><Manage></Manage></PrivateRoutes>,
         loader: () => fetch('products.json')
 
       },
