@@ -2,13 +2,12 @@ import React, { useContext, useState } from 'react';
 import './Registration.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
-import { Result } from 'postcss';
+// import { Result } from 'postcss';
 
 const Registration = () => {
 
   // password same na hole error dibe 
   const [error, setError] = useState('');
-  // const { createUser } = useContext(AuthContext);
   const { createUser } = useContext(AuthContext);
 
 
@@ -21,10 +20,6 @@ const Registration = () => {
     const password = form.password.value;
     const conformPassword = form.conformPassword.value;
     console.log(email, password, conformPassword)
-
-
-
-
     /*
     প্রত্যেক বার রিসেট করবে
     */
@@ -34,34 +29,33 @@ const Registration = () => {
     // condition check korbe password same ki na
     if (password !== conformPassword) {
       setError('please put on same password!')
-
+      return
 
     }
 
     else if (password.length < 6) {
 
       setError('please put on must be 6 characters ')
+      return
 
     }
-    alert('Successfully you Enrolled');
-
-
+    alert('Successfully you Enrolled'); 
   }
 
   /**
    * এই খানে ফাইয়ার বেস ফাংসান ব্যবহার করা হয়ছে
    * */
-  
-
   createUser(email, password)
     .then(result => {
       const loggedUser = result.user;
-      console.log(loggedUser)
+      console.log(loggedUser);
     })
     .catch(error => {
       console.log(error)
       setError(error.message)
     })
+
+
 
   return (
 

@@ -19,12 +19,15 @@ const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
 
+  
+
   /**
    * 
 */
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
+
   }
 
   const authInfo = {
@@ -39,3 +42,10 @@ const AuthProvider = ({ children }) => {
 };
 
 export default AuthProvider;
+
+
+
+
+
+
+  
