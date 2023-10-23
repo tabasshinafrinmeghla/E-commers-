@@ -1,14 +1,49 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Login = () => {
+
+  /**
+   * sinIn আসবে useContext er AuthContext থেকে
+  */
+
+  const { signIn } = useContext(AuthContext)
+
+
+  const handleLogIn = event => {
+    event.preventDefault();
+
+    /**
+     * input theke data neyar jonno amra from er email theke value nicchi */
+
+
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password,)
+
+
+    signIn(email, password)
+      .then(result => {
+        const loginUser = result.user
+        console.log(loginUser)
+        form.reset();
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+
+
   return (
     <>
       <div className='form-container'>
         <h2 className='form-title'>Log in</h2>
-        <form>
+        <form onSubmit={handleLogIn}>
           <div className="from-control">
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="" placeholder='email' required />
