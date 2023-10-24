@@ -19,6 +19,9 @@ const Login = () => {
   const location = useLocation();
   console.log(location);
 
+  /**
+   * log in korar por ager sate e chole jabe 
+   * */
   const from = location.state?.from?.pathname || '/';
 
 
